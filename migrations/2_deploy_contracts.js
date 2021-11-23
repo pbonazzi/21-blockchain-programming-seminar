@@ -1,11 +1,11 @@
 const UZHRewardToken = artifacts.require("UZHRewardToken");
-const UZHETHToken = artifacts.require("UZHETHToken");
+const UZHStableToken = artifacts.require("UZHStableToken");
 const YieldFarm = artifacts.require("YieldFarm");
 
 module.exports = async function(deployer, network, accounts) {
   // Deploy Stable Token
-  await deployer.deploy(UZHETHToken);
-  const uzhethToken = await UZHETHToken.deployed();
+  await deployer.deploy(UZHStableToken);
+  const uzhethToken = await UZHStableToken.deployed();
 
   // Deploy Amogus Token
   await deployer.deploy(UZHRewardToken);

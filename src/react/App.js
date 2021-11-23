@@ -3,7 +3,7 @@ import { theme } from "./styles/theme";
 import { ThemeProvider } from "styled-components";
 import Main from "./Main";
 import Web3 from "web3";
-import UZHETHToken from "../abis/UZHETHToken.json";
+import UZHStableToken from "../abis/UZHStableToken.json";
 import UZHRewardToken from "../abis/UZHRewardToken.json";
 import YieldFarm from "../abis/YieldFarm.json";
 
@@ -30,7 +30,7 @@ class App extends Component {
 
     //load UZHETHToken
     //get a reference to the contract in the network
-    const uzhethTokenData = UZHETHToken.networks[networkId];
+    const uzhethTokenData = UZHStableToken.networks[networkId];
     if (uzhethTokenData) {
       //create a new contract object with the same json interface of the respective smart contract
       //this allows us to interact with smart contracts as if they were JavaScript objects.
@@ -48,7 +48,7 @@ class App extends Component {
         .call();
       this.setState({ uzhethTokenBalance: uzhethTokenBalance.toString() });
     } else {
-      window.alert("UZHETHToken contract not deployed to detected network.");
+      window.alert("UZHStableToken contract not deployed to detected network.");
     }
 
     // Same procedure for Amongus Token

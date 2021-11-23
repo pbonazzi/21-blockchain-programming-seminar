@@ -1,6 +1,6 @@
-const DaiToken = artifacts.require('DaiToken')
-const DappToken = artifacts.require('DappToken')
-const TokenFarm = artifacts.require('TokenFarm')
+const DaiToken = artifacts.require('UZHStableToken')
+const DappToken = artifacts.require('UZHRewardToken')
+const TokenFarm = artifacts.require('YieldFarm')
 
 require('chai')
   .use(require('chai-as-promised'))
@@ -10,7 +10,7 @@ function tokens(n) {
   return web3.utils.toWei(n, 'ether');
 }
 
-contract('TokenFarm', ([owner, investor]) => {
+contract('YieldFarm', ([owner, investor]) => {
   let daiToken, dappToken, tokenFarm
 
   before(async () => {
