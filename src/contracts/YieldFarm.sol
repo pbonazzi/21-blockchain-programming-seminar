@@ -1,22 +1,22 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.8.4;
+pragma solidity 0.8.4;
 
 import "./UZHRewardToken.sol";
-import "./UZHETHToken.sol";
+import "./UZHStableToken.sol";
 
 contract YieldFarm {
     string public name = "Dapp Token Farm";
     address public owner;
     UZHRewardToken public uzhrewardToken;
-    UZHETHToken public uzhethToken;
+    UZHStableToken public uzhethToken;
 
     address[] public deposers;
     mapping(address => uint) public deposingBalance;
     mapping(address => bool) public hasDeposed;
     mapping(address => bool) public isDeposing;
 
-    constructor(UZHRewardToken _uzhrewardToken, UZHETHToken _uzhethToken){
+    constructor(UZHRewardToken _uzhrewardToken, UZHStableToken _uzhethToken){
         uzhrewardToken = _uzhrewardToken;
         uzhethToken = _uzhethToken;
         owner = msg.sender;

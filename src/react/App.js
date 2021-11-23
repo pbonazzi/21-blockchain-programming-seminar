@@ -35,7 +35,7 @@ class App extends Component {
       //create a new contract object with the same json interface of the respective smart contract
       //this allows us to interact with smart contracts as if they were JavaScript objects.
       const uzhethToken = new web3.eth.Contract(
-        UZHETHToken.abi,
+        UZHStableToken.abi,
         uzhethTokenData.address
       );
 

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.8.4;
+pragma solidity 0.8.4;
 
-contract UZHETHToken {
-    string  public name = "UZHETH Token";
+contract UZHStableToken {
+    string  public name = "UZHStableToken";
     string  public symbol = "UZHETH";
     uint256 public totalSupply = 1000000000000000000000000; // 1 million tokens
     uint8   public decimals = 18;

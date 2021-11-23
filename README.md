@@ -20,6 +20,7 @@ geth --datadir ~/.uzheth attach http://localhost:8545
 To run the application
 
 ```
+npm install
 npm start
 ```
 
