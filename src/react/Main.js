@@ -22,7 +22,7 @@ class Main extends Component {
                 this.props.uzhethTokenBalance,
                 "ether"
               )}
-              currency={"|UZHETH|"}
+              currency={"|UZHStable|"}
             />
             <BalanceAccount
               text={"Investment Balance"}
@@ -30,7 +30,7 @@ class Main extends Component {
                 this.props.deposingBalance,
                 "ether"
               )}
-              currency={"|UZHETH|"}
+              currency={"|UZHStable|"}
             />
             <BalanceAccount
               text={"Reward Balance"}
